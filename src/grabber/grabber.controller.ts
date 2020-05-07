@@ -7,9 +7,8 @@ import { ApiTags } from '@nestjs/swagger';
 export class GrabberController {
   constructor(private readonly grabberService: GrabberService) {}
 
-  @Get('/schedule/:id')
-  getData(@Param('id') id) {
-    console.log('id', id)
+  @Get('/schedule')
+  getData() {
     return this.grabberService.getSchedule();
   }
 }
